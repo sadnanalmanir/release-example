@@ -35,3 +35,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### What's Changed
 
 * Added a CI/CD workflow
+
+## v0.0.5 (2024-03-06)
+
+[GitHub release](https://github.com/sadnanalmanir/release-example/releases/tag/v0.0.5)
+
+
+### What's Changed
+
+* Added a CI/CD workflow
