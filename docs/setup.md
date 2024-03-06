@@ -13,24 +13,17 @@ source `git` is required.
 ---
 `fairscape-cli` can be installed by any of the following three options:
 
-## Install with `pip`
----
+### Install with `pip`
+
 `fairscape-cli` is available on [PyPi](https://pypi.org/project/fairscape-cli/). Installation using pip is simple: 
   
   ```bash
   pip install fairscape-cli
   ```
 
-## Install with `pip` from repository
----
-The following `pip` command installs the `fairscape-cli` by checking out the specific branch:
 
-  ```bash
-  pip install git+https://github.com/fairscape/fairscape-cli@max-schema-dev#egg=fairscape-cli
-  ```
+### Install from the source
 
-## Install from source using `pyproject.toml`
----
 Clone the repository from Github 
 
   ```bash
@@ -41,12 +34,6 @@ Go to the repository
 
   ```bash
   cd fairscape-cli
-  ```
-
-Checkout the branch `max-schema-dev` for the latest build
-
-  ```bash
-  git checkout max-schema-dev
   ```
 
 Install using `pip`
