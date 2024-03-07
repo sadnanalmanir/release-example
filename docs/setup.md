@@ -1,6 +1,3 @@
----
-## Requirements
----
 The CLI is compatible with Python 3.8+. Installation of the CLI requires `pip` to be installed. In order to install from the 
 source `git` is required.
 
