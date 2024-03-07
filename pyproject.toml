@@ -4,38 +4,59 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "release-example"
-version = "0.0.7"
-authors = [
-  { name="Example Author", email="author@example.com" },
-]
-description = "Release python project on testpypi"
+version = "0.0.8"
+description = "CLI tool for B2AI metadata validation and ROCrate creation"
 readme = "README.md"
-license = {file = "LICENSE"}
 requires-python = ">=3.8"
-keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
-classifiers = [
-  # How mature is this project? Common values are
-  #   3 - Alpha
-  #   4 - Beta
-  #   5 - Production/Stable
-  #"Development Status :: 4 - Beta",
-  #"Development Status :: 1 - Planning",
-  "Development Status :: 5 - Production/Stable",
-
-  # Indicate who your project is intended for
-  "Intended Audience :: Developers",
-  "Topic :: Software Development :: Build Tools",
-
-  # Pick your license as you wish (see also "license" above)
-  "License :: OSI Approved :: MIT License",
-
-  # Specify the Python versions you support here.
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
+authors = [
+        { name = "Max Levinson",    email = "mal8ch@virginia.edu"},
+        { name = "Sadnan Al Manir", email = "sadnanalmanir@gmail.com"},
+        { name = "Tim Clark",       email = "twc8q@virginia.edu"}
 ]
+license = {file= "LICENSE"}
+# For a list of valid classifiers, see https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Build Tools",
+    "Environment :: Console",
+    "Framework :: Pydantic :: 2",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",  
+    "Operating System :: OS Independent",
+    "Topic :: File Formats :: JSON",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Software Development :: Libraries :: Python Modules"      
+]
+keywords = ["fairscape", "reproducibility", "FAIR", "B2AI"]
+dependencies = [
+        "click>=8.1.7",
+        "pydantic>=2.5.1",
+        "prettytable>=3.9.0",
+        "imageio>=2.33.0",
+        "jsonschema>=4.20.0",
+        "sqids>=0.4.1"
+]
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [project.urls]
 Homepage = "https://github.com/sadnanalmanir/release-example"
-Documentation = "https://readthedocs.org"
+Documentation = "https://sadnanalmanir.github.io/release-example"
 Repository = "https://github.com/sadnanalmanir/release-example.git"
 Issues = "https://github.com/sadnanalmanir/release-example/issues"
 Changelog = "https://github.com/sadnanalmanir/release-example/blob/main/CHANGELOG.md"
+Citation = "https://github.com/sadnanalmanir/release-example/blob/main/CITATION.cff"
+
+[project.scripts]
+fairscape-cli = "fairscape_cli.__main__:cli"
